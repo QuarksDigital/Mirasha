@@ -7,6 +7,7 @@
       "ayushLicense": "FSSAI Lic. No. - to be added",
       "gstRate": 18,
       "currency": "INR",
+      "isCombo": false,
       "slug": "shilajit-resin",
       "name": "Shilajit Resin",
       "sanskritName": "Shilajatu",
@@ -79,6 +80,7 @@
       "ayushLicense": "FSSAI Lic. No. - to be added",
       "gstRate": 18,
       "currency": "INR",
+      "isCombo": false,
       "slug": "shilajit-honey-stick",
       "name": "Shilajit Honey Stick",
       "sanskritName": "Shilajatu",
@@ -151,6 +153,7 @@
       "ayushLicense": "FSSAI Lic. No. - to be added",
       "gstRate": 18,
       "currency": "INR",
+      "isCombo": false,
       "slug": "shilajit-gummies",
       "name": "Shilajit Gummies",
       "sanskritName": "Shilajatu",
@@ -217,6 +220,7 @@
       "ayushLicense": "FSSAI Lic. No. - to be added",
       "gstRate": 18,
       "currency": "INR",
+      "isCombo": false,
       "slug": "multivitamin-gummies",
       "name": "Multivitamin Gummies",
       "tagline": "Daily nutrition for a stronger you",
@@ -279,6 +283,7 @@
       "ayushLicense": "FSSAI Lic. No. - to be added",
       "gstRate": 18,
       "currency": "INR",
+      "isCombo": false,
       "slug": "vitamin-b12-capsules",
       "name": "Vitamin B12 Capsules",
       "tagline": "Energy · Focus · Nervous system",
@@ -340,6 +345,7 @@
       "ayushLicense": "FSSAI Lic. No. - to be added",
       "gstRate": 18,
       "currency": "INR",
+      "isCombo": false,
       "slug": "sugar-free-powder",
       "name": "Sugar Free Powder",
       "tagline": "Details coming soon",
@@ -396,6 +402,7 @@
       "ayushLicense": "FSSAI Lic. No. - to be added",
       "gstRate": 18,
       "currency": "INR",
+      "isCombo": false,
       "slug": "collagen-capsules",
       "name": "Collagen Capsules",
       "tagline": "Skin · Hair · Nails · Joint support",
@@ -457,6 +464,7 @@
       "ayushLicense": "FSSAI Lic. No. - to be added",
       "gstRate": 18,
       "currency": "INR",
+      "isCombo": false,
       "slug": "rosemary-oil",
       "name": "Rosemary Oil",
       "tagline": "Hair growth · Scalp health · Stronger hair",
@@ -522,6 +530,7 @@
       "ayushLicense": "FSSAI Lic. No. - to be added",
       "gstRate": 18,
       "currency": "INR",
+      "isCombo": false,
       "slug": "apple-cider-vinegar-tablets",
       "name": "Apple Cider Dissolving Tablet",
       "tagline": "With Mother · Digestion · Metabolism · Weight management",
@@ -586,6 +595,7 @@
       "ayushLicense": "FSSAI Lic. No. - to be added",
       "gstRate": 18,
       "currency": "INR",
+      "isCombo": false,
       "slug": "acv-moringa-tablets",
       "name": "ACV Moringa",
       "tagline": "Detox · Metabolism · Immunity",
@@ -657,6 +667,7 @@
       "ayushLicense": "FSSAI Lic. No. - to be added",
       "gstRate": 18,
       "currency": "INR",
+      "isCombo": false,
       "slug": "magnesium-gummies",
       "name": "Magnesium Gummies",
       "tagline": "Relax · Sleep · Recovery",
@@ -719,6 +730,7 @@
       "ayushLicense": "FSSAI Lic. No. - to be added",
       "gstRate": 18,
       "currency": "INR",
+      "isCombo": false,
       "slug": "sea-buckthorn-juice",
       "name": "Sea Buckthorn Juice",
       "tagline": "Rich source of Omega 3, 6, 7 & 9",
@@ -775,6 +787,667 @@
       "isFeatured": true,
       "isBestseller": false,
       "faq": []
+    },
+    {
+      "brand": "Mirasha",
+      "manufacturer": "Mirasha Wellness, Delhi NCR (placeholder)",
+      "countryOfOrigin": "India",
+      "ayushLicense": "FSSAI Lic. No. - to be added",
+      "gstRate": 18,
+      "currency": "INR",
+      "slug": "daily-vitality-duo",
+      "name": "Daily Vitality Duo",
+      "tagline": "Shilajit Resin + Shilajit Honey Stick",
+      "category": "combos",
+      "form": "Combo · 2 products",
+      "description": "Our two Shilajit essentials together: pure Himalayan resin for your morning ritual and honey sticks for energy on the go.",
+      "benefits": [
+        "Supports energy and stamina all day",
+        "Resin at home, sticks on the go",
+        "Save on buying separately"
+      ],
+      "keyIngredients": [
+        {
+          "name": "Purified Shilajit",
+          "latin": "Asphaltum punjabianum",
+          "amount": "100%",
+          "role": "Rasayana"
+        },
+        {
+          "name": "Shilajit extract",
+          "latin": "Asphaltum punjabianum",
+          "amount": "-",
+          "role": "Rasayana"
+        },
+        {
+          "name": "Honey",
+          "latin": "Mel",
+          "amount": "-",
+          "role": "Carrier, natural energy"
+        }
+      ],
+      "doshas": [],
+      "dosage": "Follow the directions for each product in the combo",
+      "howToUse": "Shilajit Resin: 300–500 mg (pea-sized) once daily. Shilajit Honey Stick: 1 stick daily.",
+      "precautions": [
+        "Not for children, or during pregnancy or breastfeeding.",
+        "Consult a physician if you have gout, high uric acid or a medical condition.",
+        "Contains honey - diabetics should consult a physician.",
+        "Not for children under 12."
+      ],
+      "variants": [
+        {
+          "sku": "MIR-CMB-DAILYVIT",
+          "label": "30 g + 15 sticks",
+          "price": 1949,
+          "mrp": 2998,
+          "stock": 80
+        }
+      ],
+      "images": [
+        "/products/daily-vitality-duo.jpg"
+      ],
+      "rating": 0,
+      "reviewCount": 0,
+      "tags": [
+        "combo",
+        "shilajit",
+        "energy",
+        "himalayan",
+        "on-the-go"
+      ],
+      "certifications": [
+        "Lab Tested",
+        "Heavy-metal Tested"
+      ],
+      "shelfLife": "See each product",
+      "storage": "Store each product as directed on its label.",
+      "isFeatured": true,
+      "isBestseller": true,
+      "isCombo": true,
+      "components": [
+        {
+          "slug": "shilajit-resin",
+          "name": "Shilajit Resin",
+          "sku": "MIR-SHR-30",
+          "label": "30 g",
+          "quantity": 1
+        },
+        {
+          "slug": "shilajit-honey-stick",
+          "name": "Shilajit Honey Stick",
+          "sku": "MIR-SHS-15",
+          "label": "15 sticks",
+          "quantity": 1
+        }
+      ],
+      "faq": []
+    },
+    {
+      "brand": "Mirasha",
+      "manufacturer": "Mirasha Wellness, Delhi NCR (placeholder)",
+      "countryOfOrigin": "India",
+      "ayushLicense": "FSSAI Lic. No. - to be added",
+      "gstRate": 18,
+      "currency": "INR",
+      "slug": "energy-focus-stack",
+      "name": "Energy & Focus Stack",
+      "tagline": "Shilajit Gummies + Vitamin B12 Capsules",
+      "category": "combos",
+      "form": "Combo · 2 products",
+      "description": "Shilajit for strength and performance, paired with vitamin B12 for energy metabolism and focus.",
+      "benefits": [
+        "Supports physical and mental energy",
+        "Supports focus and concentration",
+        "Easy daily routine"
+      ],
+      "keyIngredients": [
+        {
+          "name": "Shilajit extract",
+          "latin": "Asphaltum punjabianum",
+          "amount": "-",
+          "role": "Rasayana"
+        },
+        {
+          "name": "Vitamin B12",
+          "latin": "Methylcobalamin (to be confirmed)",
+          "amount": "-",
+          "role": "Energy, nerve health"
+        }
+      ],
+      "doshas": [],
+      "dosage": "Follow the directions for each product in the combo",
+      "howToUse": "Shilajit Gummies: 2 gummies daily. Vitamin B12 Capsules: 1 capsule daily.",
+      "precautions": [
+        "Not for children.",
+        "Do not exceed the recommended dose.",
+        "Consult a physician if pregnant, nursing or on medication."
+      ],
+      "variants": [
+        {
+          "sku": "MIR-CMB-ENERGYFO",
+          "label": "30 gummies + 60 capsules",
+          "price": 1189,
+          "mrp": 1848,
+          "stock": 140
+        }
+      ],
+      "images": [
+        "/products/energy-focus-stack.jpg"
+      ],
+      "rating": 0,
+      "reviewCount": 0,
+      "tags": [
+        "combo",
+        "shilajit",
+        "gummies",
+        "energy",
+        "vitamin-b12",
+        "vegetarian"
+      ],
+      "certifications": [
+        "Lab Tested"
+      ],
+      "shelfLife": "See each product",
+      "storage": "Store each product as directed on its label.",
+      "isFeatured": true,
+      "isBestseller": false,
+      "isCombo": true,
+      "components": [
+        {
+          "slug": "shilajit-gummies",
+          "name": "Shilajit Gummies",
+          "sku": "MIR-SHG-30",
+          "label": "30 gummies",
+          "quantity": 1
+        },
+        {
+          "slug": "vitamin-b12-capsules",
+          "name": "Vitamin B12 Capsules",
+          "sku": "MIR-B12-60",
+          "label": "60 capsules",
+          "quantity": 1
+        }
+      ],
+      "faq": []
+    },
+    {
+      "brand": "Mirasha",
+      "manufacturer": "Mirasha Wellness, Delhi NCR (placeholder)",
+      "countryOfOrigin": "India",
+      "ayushLicense": "FSSAI Lic. No. - to be added",
+      "gstRate": 18,
+      "currency": "INR",
+      "slug": "glow-from-within",
+      "name": "Glow From Within",
+      "tagline": "Collagen Capsules + Sea Buckthorn Juice",
+      "category": "combos",
+      "form": "Combo · 2 products",
+      "description": "Collagen for skin elasticity, with sea buckthorn's vitamin C and Omega 7 for a healthy, radiant complexion.",
+      "benefits": [
+        "Supports skin elasticity and hydration",
+        "Vitamin C and Omega 7 for skin health",
+        "Beauty that starts from within"
+      ],
+      "keyIngredients": [
+        {
+          "name": "Collagen",
+          "latin": "-",
+          "amount": "-",
+          "role": "Skin, hair, joints"
+        },
+        {
+          "name": "Sea buckthorn",
+          "latin": "Hippophae rhamnoides",
+          "amount": "-",
+          "role": "Omegas, vitamin C"
+        }
+      ],
+      "doshas": [],
+      "dosage": "Follow the directions for each product in the combo",
+      "howToUse": "Collagen Capsules: 2 capsules daily. Sea Buckthorn Juice: To be confirmed.",
+      "precautions": [
+        "Consult a physician if pregnant, nursing or on medication."
+      ],
+      "variants": [
+        {
+          "sku": "MIR-CMB-GLOWFROM",
+          "label": "60 capsules + 500 ml",
+          "price": 1359,
+          "mrp": 2098,
+          "stock": 90
+        }
+      ],
+      "images": [
+        "/products/glow-from-within.jpg"
+      ],
+      "rating": 0,
+      "reviewCount": 0,
+      "tags": [
+        "combo",
+        "collagen",
+        "skin",
+        "hair",
+        "sea-buckthorn",
+        "omega",
+        "immunity"
+      ],
+      "certifications": [
+        "Lab Tested"
+      ],
+      "shelfLife": "See each product",
+      "storage": "Store each product as directed on its label.",
+      "isFeatured": true,
+      "isBestseller": false,
+      "isCombo": true,
+      "components": [
+        {
+          "slug": "collagen-capsules",
+          "name": "Collagen Capsules",
+          "sku": "MIR-COL-60",
+          "label": "60 capsules",
+          "quantity": 1
+        },
+        {
+          "slug": "sea-buckthorn-juice",
+          "name": "Sea Buckthorn Juice",
+          "sku": "MIR-SBT-500",
+          "label": "500 ml",
+          "quantity": 1
+        }
+      ],
+      "faq": []
+    },
+    {
+      "brand": "Mirasha",
+      "manufacturer": "Mirasha Wellness, Delhi NCR (placeholder)",
+      "countryOfOrigin": "India",
+      "ayushLicense": "FSSAI Lic. No. - to be added",
+      "gstRate": 18,
+      "currency": "INR",
+      "slug": "hair-care-ritual",
+      "name": "Hair Care Ritual",
+      "tagline": "Rosemary Oil + Collagen Capsules",
+      "category": "combos",
+      "form": "Combo · 2 products",
+      "description": "Care for your hair inside and out: rosemary oil for the scalp and collagen for stronger hair and nails.",
+      "benefits": [
+        "Supports healthy hair growth",
+        "Nourishes the scalp",
+        "Supports stronger hair and nails"
+      ],
+      "keyIngredients": [
+        {
+          "name": "Rosemary",
+          "latin": "Rosmarinus officinalis",
+          "amount": "-",
+          "role": "Scalp and hair care"
+        },
+        {
+          "name": "Collagen",
+          "latin": "-",
+          "amount": "-",
+          "role": "Skin, hair, joints"
+        }
+      ],
+      "doshas": [],
+      "dosage": "Follow the directions for each product in the combo",
+      "howToUse": "Rosemary Oil: For external use only. Collagen Capsules: 2 capsules daily.",
+      "precautions": [
+        "For external use only.",
+        "Patch test before first use. Avoid contact with eyes.",
+        "Consult a physician if pregnant, nursing or on medication."
+      ],
+      "variants": [
+        {
+          "sku": "MIR-CMB-HAIRCARE",
+          "label": "30 ml + 60 capsules",
+          "price": 1149,
+          "mrp": 1798,
+          "stock": 110
+        }
+      ],
+      "images": [
+        "/products/hair-care-ritual.jpg"
+      ],
+      "rating": 0,
+      "reviewCount": 0,
+      "tags": [
+        "combo",
+        "hair",
+        "scalp",
+        "external",
+        "collagen",
+        "skin"
+      ],
+      "certifications": [
+        "Cruelty Free",
+        "Lab Tested"
+      ],
+      "shelfLife": "See each product",
+      "storage": "Store each product as directed on its label.",
+      "isFeatured": false,
+      "isBestseller": false,
+      "isCombo": true,
+      "components": [
+        {
+          "slug": "rosemary-oil",
+          "name": "Rosemary Oil",
+          "sku": "MIR-ROS-30",
+          "label": "30 ml",
+          "quantity": 1
+        },
+        {
+          "slug": "collagen-capsules",
+          "name": "Collagen Capsules",
+          "sku": "MIR-COL-60",
+          "label": "60 capsules",
+          "quantity": 1
+        }
+      ],
+      "faq": []
+    },
+    {
+      "brand": "Mirasha",
+      "manufacturer": "Mirasha Wellness, Delhi NCR (placeholder)",
+      "countryOfOrigin": "India",
+      "ayushLicense": "FSSAI Lic. No. - to be added",
+      "gstRate": 18,
+      "currency": "INR",
+      "slug": "gut-metabolism-kit",
+      "name": "Gut & Metabolism Kit",
+      "tagline": "Apple Cider Tablet + ACV Moringa",
+      "category": "combos",
+      "form": "Combo · 2 products",
+      "description": "Two dissolving tablets for a lighter, more balanced you: apple cider vinegar with the Mother, and ACV with moringa.",
+      "benefits": [
+        "Supports digestion and metabolism",
+        "Supports natural detox",
+        "No harsh vinegar taste"
+      ],
+      "keyIngredients": [
+        {
+          "name": "Apple cider vinegar with Mother",
+          "latin": "Malus domestica",
+          "amount": "-",
+          "role": "Digestion, metabolism"
+        },
+        {
+          "name": "Apple cider vinegar",
+          "latin": "Malus domestica",
+          "amount": "-",
+          "role": "Metabolism"
+        },
+        {
+          "name": "Moringa",
+          "latin": "Moringa oleifera",
+          "amount": "-",
+          "role": "Nutrition, immunity"
+        }
+      ],
+      "doshas": [],
+      "dosage": "Follow the directions for each product in the combo",
+      "howToUse": "Apple Cider Dissolving Tablet: 1 tablet daily. ACV Moringa: 1 tablet daily.",
+      "precautions": [
+        "Do not swallow the tablet whole.",
+        "Consult a physician if you have acidity or ulcers.",
+        "Consult a physician if pregnant or on medication."
+      ],
+      "variants": [
+        {
+          "sku": "MIR-CMB-GUTMETAB",
+          "label": "15 tablets + 15 tablets",
+          "price": 759,
+          "mrp": 1198,
+          "stock": 130
+        }
+      ],
+      "images": [
+        "/products/gut-metabolism-kit.jpg"
+      ],
+      "rating": 0,
+      "reviewCount": 0,
+      "tags": [
+        "combo",
+        "acv",
+        "digestion",
+        "metabolism",
+        "moringa",
+        "detox"
+      ],
+      "certifications": [
+        "Lab Tested"
+      ],
+      "shelfLife": "See each product",
+      "storage": "Store each product as directed on its label.",
+      "isFeatured": false,
+      "isBestseller": true,
+      "isCombo": true,
+      "components": [
+        {
+          "slug": "apple-cider-vinegar-tablets",
+          "name": "Apple Cider Dissolving Tablet",
+          "sku": "MIR-ACV-15",
+          "label": "15 tablets",
+          "quantity": 1
+        },
+        {
+          "slug": "acv-moringa-tablets",
+          "name": "ACV Moringa",
+          "sku": "MIR-ACM-15",
+          "label": "15 tablets",
+          "quantity": 1
+        }
+      ],
+      "faq": []
+    },
+    {
+      "brand": "Mirasha",
+      "manufacturer": "Mirasha Wellness, Delhi NCR (placeholder)",
+      "countryOfOrigin": "India",
+      "ayushLicense": "FSSAI Lic. No. - to be added",
+      "gstRate": 18,
+      "currency": "INR",
+      "slug": "rest-restore-pack",
+      "name": "Rest & Restore Pack",
+      "tagline": "Magnesium Gummies + Multivitamin Gummies",
+      "category": "combos",
+      "form": "Combo · 2 products",
+      "description": "Daily nutrition by day and magnesium to unwind at night — two great-tasting gummies for complete everyday support.",
+      "benefits": [
+        "Supports relaxation and restful sleep",
+        "Helps fill daily nutritional gaps",
+        "Delicious gummies"
+      ],
+      "keyIngredients": [
+        {
+          "name": "Magnesium",
+          "latin": "-",
+          "amount": "-",
+          "role": "Relaxation, recovery"
+        },
+        {
+          "name": "Vitamins & minerals blend",
+          "latin": "-",
+          "amount": "-",
+          "role": "Daily nutrition"
+        }
+      ],
+      "doshas": [],
+      "dosage": "Follow the directions for each product in the combo",
+      "howToUse": "Magnesium Gummies: 2 gummies daily. Multivitamin Gummies: 2 gummies daily.",
+      "precautions": [
+        "Keep out of reach of children.",
+        "Consult a physician if you have kidney conditions.",
+        "Do not exceed the recommended dose."
+      ],
+      "variants": [
+        {
+          "sku": "MIR-CMB-RESTREST",
+          "label": "30 gummies + 30 gummies",
+          "price": 1099,
+          "mrp": 1698,
+          "stock": 120
+        }
+      ],
+      "images": [
+        "/products/rest-restore-pack.jpg"
+      ],
+      "rating": 0,
+      "reviewCount": 0,
+      "tags": [
+        "combo",
+        "magnesium",
+        "sleep",
+        "gummies",
+        "multivitamin",
+        "daily"
+      ],
+      "certifications": [
+        "Lab Tested"
+      ],
+      "shelfLife": "See each product",
+      "storage": "Store each product as directed on its label.",
+      "isFeatured": false,
+      "isBestseller": false,
+      "isCombo": true,
+      "components": [
+        {
+          "slug": "magnesium-gummies",
+          "name": "Magnesium Gummies",
+          "sku": "MIR-MAG-30",
+          "label": "30 gummies",
+          "quantity": 1
+        },
+        {
+          "slug": "multivitamin-gummies",
+          "name": "Multivitamin Gummies",
+          "sku": "MIR-MVG-30",
+          "label": "30 gummies",
+          "quantity": 1
+        }
+      ],
+      "faq": []
+    },
+    {
+      "brand": "Mirasha",
+      "manufacturer": "Mirasha Wellness, Delhi NCR (placeholder)",
+      "countryOfOrigin": "India",
+      "ayushLicense": "FSSAI Lic. No. - to be added",
+      "gstRate": 18,
+      "currency": "INR",
+      "slug": "complete-wellness-box",
+      "name": "Complete Wellness Box",
+      "tagline": "Multivitamin + Vitamin B12 + Magnesium + Shilajit Gummies",
+      "category": "combos",
+      "form": "Combo · 4 products",
+      "description": "Our most complete daily routine in one box: nutrition, energy, focus and rest.",
+      "benefits": [
+        "Covers energy, focus, nutrition and sleep",
+        "Our best value bundle",
+        "A thoughtful wellness gift"
+      ],
+      "keyIngredients": [
+        {
+          "name": "Vitamins & minerals blend",
+          "latin": "-",
+          "amount": "-",
+          "role": "Daily nutrition"
+        },
+        {
+          "name": "Vitamin B12",
+          "latin": "Methylcobalamin (to be confirmed)",
+          "amount": "-",
+          "role": "Energy, nerve health"
+        },
+        {
+          "name": "Magnesium",
+          "latin": "-",
+          "amount": "-",
+          "role": "Relaxation, recovery"
+        },
+        {
+          "name": "Shilajit extract",
+          "latin": "Asphaltum punjabianum",
+          "amount": "-",
+          "role": "Rasayana"
+        }
+      ],
+      "doshas": [],
+      "dosage": "Follow the directions for each product in the combo",
+      "howToUse": "Multivitamin Gummies: 2 gummies daily. Vitamin B12 Capsules: 1 capsule daily. Magnesium Gummies: 2 gummies daily. Shilajit Gummies: 2 gummies daily.",
+      "precautions": [
+        "Keep out of reach of children.",
+        "Do not exceed the recommended dose.",
+        "Consult a physician if pregnant, nursing or on medication.",
+        "Consult a physician if you have kidney conditions.",
+        "Not for children."
+      ],
+      "variants": [
+        {
+          "sku": "MIR-CMB-COMPLETE",
+          "label": "30 gummies + 60 capsules + 30 gummies + 30 gummies",
+          "price": 2289,
+          "mrp": 3546,
+          "stock": 120
+        }
+      ],
+      "images": [
+        "/products/complete-wellness-box.jpg"
+      ],
+      "rating": 0,
+      "reviewCount": 0,
+      "tags": [
+        "combo",
+        "multivitamin",
+        "gummies",
+        "daily",
+        "vitamin-b12",
+        "energy",
+        "vegetarian",
+        "magnesium",
+        "sleep",
+        "shilajit"
+      ],
+      "certifications": [
+        "Lab Tested"
+      ],
+      "shelfLife": "See each product",
+      "storage": "Store each product as directed on its label.",
+      "isFeatured": true,
+      "isBestseller": false,
+      "isCombo": true,
+      "components": [
+        {
+          "slug": "multivitamin-gummies",
+          "name": "Multivitamin Gummies",
+          "sku": "MIR-MVG-30",
+          "label": "30 gummies",
+          "quantity": 1
+        },
+        {
+          "slug": "vitamin-b12-capsules",
+          "name": "Vitamin B12 Capsules",
+          "sku": "MIR-B12-60",
+          "label": "60 capsules",
+          "quantity": 1
+        },
+        {
+          "slug": "magnesium-gummies",
+          "name": "Magnesium Gummies",
+          "sku": "MIR-MAG-30",
+          "label": "30 gummies",
+          "quantity": 1
+        },
+        {
+          "slug": "shilajit-gummies",
+          "name": "Shilajit Gummies",
+          "sku": "MIR-SHG-30",
+          "label": "30 gummies",
+          "quantity": 1
+        }
+      ],
+      "faq": []
     }
   ],
   "categories": [
@@ -807,6 +1480,11 @@
       "slug": "immunity",
       "name": "Immunity",
       "description": "Everyday defence, naturally"
+    },
+    {
+      "slug": "combos",
+      "name": "Combos",
+      "description": "Better together, for less"
     }
   ]
 }

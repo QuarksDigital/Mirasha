@@ -62,7 +62,7 @@ export default function AddToCart({ product }: { product: Product }) {
           }
           className="btn btn-brand h-11 flex-1"
         >
-          {inStock ? "Add to bag" : "Out of stock"}
+          {inStock ? "Add to cart" : "Out of stock"}
         </button>
       </div>
       <p className="mt-4 text-sm text-muted">

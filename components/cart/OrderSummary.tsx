@@ -12,6 +12,7 @@ export default function OrderSummary({ quote, error, children }: { quote: Quote 
       ) : (
         <dl className="mt-5 space-y-3 text-[15px]">
           <Row label="Subtotal" value={formatPrice(quote.subtotal)} />
+          {quote.discount > 0 && <Row label={`Coupon ${quote.coupon?.code ?? ""}`} value={`−${formatPrice(quote.discount)}`} accent />}
           <Row label="Delivery" value={quote.shipping === 0 ? "Free" : formatPrice(quote.shipping)} />
           <div className="flex items-baseline justify-between border-t border-line pt-4">
             <dt className="font-semibold">Total</dt>
@@ -26,11 +27,11 @@ export default function OrderSummary({ quote, error, children }: { quote: Quote 
   );
 }
 
-function Row({ label, value }: { label: string; value: string }) {
+function Row({ label, value, accent = false }: { label: string; value: string; accent?: boolean }) {
   return (
     <div className="flex justify-between">
       <dt className="text-muted">{label}</dt>
-      <dd>{value}</dd>
+      <dd className={accent ? "font-medium text-brand" : undefined}>{value}</dd>
     </div>
   );
 }

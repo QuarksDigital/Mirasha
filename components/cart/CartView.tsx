@@ -17,7 +17,7 @@ export default function CartView() {
   if (items.length === 0) {
     return (
       <div className="mt-10">
-        <p className="text-xl text-muted">Your bag is empty.</p>
+        <p className="text-xl text-muted">Your cart is empty.</p>
         <Link href="/shop" className="btn btn-brand mt-8">
           Continue shopping
         </Link>

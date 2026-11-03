@@ -1,0 +1,592 @@
+{
+  "settings": {
+    "siteName": "Mirasha",
+    "domain": "https://www.mirasha.in",
+    "whatsappNumber": "919899491916",
+    "whatsappMessage": "Hi Mirasha! I'd like to know more about your products.",
+    "instagramUrl": "https://www.instagram.com/mirasha.wellness/",
+    "shopifyUrl": "https://mirasha.myshopify.com",
+    "supportEmail": "diyamonga25@gmail.com",
+    "supportPhone": "+91 98994 91916",
+    "freeShippingAbove": 499,
+    "shippingFee": 49
+  },
+  "offers": [
+    {
+      "title": "Flat 10% off your first order",
+      "detail": "Use code WELCOME10 at checkout",
+      "code": "WELCOME10",
+      "link": "/shop",
+      "active": true,
+      "order": 1
+    },
+    {
+      "title": "Free delivery on orders above ₹499",
+      "detail": "Across India, no code needed",
+      "code": "",
+      "link": "/shop",
+      "active": true,
+      "order": 2
+    },
+    {
+      "title": "Save up to 35% with combos",
+      "detail": "Curated bundles for every goal",
+      "code": "",
+      "link": "/offers",
+      "active": true,
+      "order": 3
+    },
+    {
+      "title": "Extra 15% off when you buy any 3",
+      "detail": "Use code TRIO15",
+      "code": "TRIO15",
+      "link": "/shop",
+      "active": true,
+      "order": 4
+    },
+    {
+      "title": "₹200 off on orders above ₹1,999",
+      "detail": "Use code FLAT200",
+      "code": "FLAT200",
+      "link": "/shop",
+      "active": true,
+      "order": 5
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Customer name",
+      "city": "Delhi",
+      "product": "Shilajit Resin",
+      "rating": 5,
+      "quote": "The Shilajit resin is the real thing. I've noticed a steady difference in my energy through the day.",
+      "active": true,
+      "order": 1
+    },
+    {
+      "name": "Customer name",
+      "city": "Gurugram",
+      "product": "Apple Cider Dissolving Tablet",
+      "rating": 5,
+      "quote": "Finally an apple cider vinegar I actually enjoy taking. One tablet in water every morning.",
+      "active": true,
+      "order": 2
+    },
+    {
+      "name": "Customer name",
+      "city": "Noida",
+      "product": "Magnesium Gummies",
+      "rating": 5,
+      "quote": "The magnesium gummies have become part of my bedtime routine. Lovely taste, too.",
+      "active": true,
+      "order": 3
+    },
+    {
+      "name": "Customer name",
+      "city": "Faridabad",
+      "product": "Rosemary Oil",
+      "rating": 5,
+      "quote": "Three months of rosemary oil twice a week and my hair feels thicker. The dropper makes it easy.",
+      "active": true,
+      "order": 4
+    },
+    {
+      "name": "Customer name",
+      "city": "Delhi",
+      "product": "Glow From Within",
+      "rating": 4,
+      "quote": "The collagen and sea buckthorn combo is now my daily routine. Skin feels more hydrated.",
+      "active": true,
+      "order": 5
+    },
+    {
+      "name": "Customer name",
+      "city": "Ghaziabad",
+      "product": "Multivitamin Gummies",
+      "rating": 5,
+      "quote": "My kids steal these! A tasty way for the whole family to get their vitamins.",
+      "active": true,
+      "order": 6
+    }
+  ],
+  "videos": [
+    {
+      "kind": "instagram",
+      "url": "https://www.instagram.com/reel/C0luCKZSl0B/",
+      "title": "Mirasha on Instagram",
+      "active": true,
+      "order": 1
+    },
+    {
+      "kind": "instagram",
+      "url": "https://www.instagram.com/reel/C0LiUbeSFR9/",
+      "title": "Mirasha on Instagram",
+      "active": true,
+      "order": 2
+    },
+    {
+      "kind": "instagram",
+      "url": "https://www.instagram.com/reel/CzgapIiSNc2/",
+      "title": "Mirasha on Instagram",
+      "active": true,
+      "order": 3
+    },
+    {
+      "kind": "instagram",
+      "url": "https://www.instagram.com/reel/CzElBDaS5NX/",
+      "title": "Mirasha on Instagram",
+      "active": true,
+      "order": 4
+    },
+    {
+      "kind": "instagram",
+      "url": "https://www.instagram.com/reel/CxlNxEWySZW/",
+      "title": "Mirasha on Instagram",
+      "active": true,
+      "order": 5
+    }
+  ],
+  "posts": [
+    {
+      "slug": "ayurveda-basics-doshas",
+      "title": "Ayurveda 101: understanding Vata, Pitta and Kapha",
+      "excerpt": "The 5,000-year-old system that treats the person, not just the symptom — and how the three doshas shape your daily routine.",
+      "category": "Ayurveda",
+      "cover": "/products/shilajit-resin.jpg",
+      "readMinutes": 5,
+      "relatedProducts": [
+        "shilajit-resin",
+        "magnesium-gummies",
+        "sea-buckthorn-juice"
+      ],
+      "publishedAt": "2026-10-01",
+      "sections": [
+        {
+          "heading": "What Ayurveda is",
+          "body": [
+            "Ayurveda — literally “the knowledge of life” — is India's traditional system of health. Rather than treating illness in isolation, it looks at the whole person: diet, sleep, digestion, stress, the seasons and even the time of day.",
+            "Its central idea is balance. When the body and mind are in balance, Ayurveda holds, health follows; when they drift out of balance, discomfort and disease begin."
+          ]
+        },
+        {
+          "heading": "The three doshas",
+          "body": [
+            "Everything in Ayurveda is described through three energies, or doshas, each a combination of the five elements. Everyone has all three, in a unique proportion called your prakriti."
+          ],
+          "points": [
+            "Vata (air + space) governs movement — breathing, circulation, the nervous system. In balance it brings creativity; out of balance, anxiety, dry skin and poor sleep.",
+            "Pitta (fire + water) governs transformation — digestion and metabolism. In balance it brings focus; out of balance, acidity, irritability and inflammation.",
+            "Kapha (earth + water) governs structure and stability. In balance it brings calm strength; out of balance, sluggishness and congestion."
+          ]
+        },
+        {
+          "heading": "Why it still matters",
+          "body": [
+            "Ayurveda's emphasis on routine (dinacharya), seasonal living (ritucharya), mindful eating and herbal Rasayanas — rejuvenating formulations — fits naturally with modern wellness. Many traditional herbs, from Shilajit to moringa, are now being studied by modern science.",
+            "Mirasha brings these traditions together with modern nutrition science in formats that fit everyday life — gummies, dissolving tablets and capsules alongside classical resins and oils."
+          ]
+        },
+        {
+          "heading": "Simple ways to start",
+          "points": [
+            "Wake and sleep at consistent times — Ayurveda considers routine the foundation of balance.",
+            "Eat your largest meal at midday, when digestive fire (agni) is strongest.",
+            "Favour warm, freshly cooked food; sip warm water through the day.",
+            "Adjust with the seasons — lighter food in summer, warming spices in winter."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "shilajit-benefits-guide",
+      "title": "Shilajit: the Himalayan resin for energy and vitality",
+      "excerpt": "What Shilajit is, why it is rich in fulvic acid and minerals, and how to choose between resin, honey sticks and gummies.",
+      "category": "Energy",
+      "cover": "/products/shilajit-honey-stick.jpg",
+      "readMinutes": 6,
+      "relatedProducts": [
+        "shilajit-resin",
+        "shilajit-honey-stick",
+        "shilajit-gummies",
+        "daily-vitality-duo"
+      ],
+      "publishedAt": "2026-10-04",
+      "sections": [
+        {
+          "heading": "What is Shilajit?",
+          "body": [
+            "Shilajit is a sticky, tar-like resin that seeps from rock crevices high in the Himalayas. It forms over centuries as plant matter is compressed and broken down between layers of rock.",
+            "In Ayurveda it is one of the most celebrated Rasayanas — rejuvenating substances — and is traditionally used to support strength, stamina and healthy ageing."
+          ]
+        },
+        {
+          "heading": "What's inside",
+          "body": [
+            "Shilajit is naturally rich in fulvic acid, humic substances and dozens of trace minerals. Fulvic acid is thought to help the body absorb and use nutrients and to support cellular energy."
+          ]
+        },
+        {
+          "heading": "Potential benefits",
+          "points": [
+            "Supports natural energy and reduces everyday fatigue",
+            "Supports stamina, strength and physical performance",
+            "A traditional Rasayana for vitality and healthy ageing",
+            "Studies suggest it may support healthy testosterone levels in men"
+          ]
+        },
+        {
+          "heading": "Resin, honey stick or gummies?",
+          "points": [
+            "Resin — the most traditional form. Dissolve a pea-sized amount in warm water or milk each morning.",
+            "Honey stick — pre-measured Shilajit in honey. No mixing, perfect for travel and busy days.",
+            "Gummies — a chewable, great-tasting option for those who dislike the earthy taste of resin."
+          ]
+        },
+        {
+          "heading": "Who should be careful",
+          "body": [
+            "Shilajit is not recommended during pregnancy or breastfeeding, for children, or for people with gout or high uric acid. Always buy purified Shilajit tested for heavy metals, and consult a doctor if you have a medical condition."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "collagen-for-skin-hair-nails",
+      "title": "Collagen: what it does for skin, hair, nails and joints",
+      "excerpt": "Your body's most abundant protein declines with age. Here's how collagen supplements may help — and how to get the most from them.",
+      "category": "Skin & Hair",
+      "cover": "/products/collagen-capsules.jpg",
+      "readMinutes": 5,
+      "relatedProducts": [
+        "collagen-capsules",
+        "glow-from-within",
+        "hair-care-ritual"
+      ],
+      "publishedAt": "2026-10-08",
+      "sections": [
+        {
+          "heading": "The protein that holds you together",
+          "body": [
+            "Collagen makes up roughly a third of the protein in the human body. It gives skin its firmness, supports the structure of hair and nails, and cushions joints.",
+            "From our mid-twenties, natural collagen production slowly declines — one reason skin loses elasticity and joints feel stiffer with age."
+          ]
+        },
+        {
+          "heading": "Potential benefits",
+          "points": [
+            "Supports skin elasticity and hydration — several studies report improvements after 8–12 weeks",
+            "Supports stronger, less brittle nails",
+            "Supports hair strength and thickness",
+            "Supports joint comfort, especially for active people"
+          ]
+        },
+        {
+          "heading": "Getting the most from collagen",
+          "points": [
+            "Be consistent — take it daily for at least 8–12 weeks before judging results.",
+            "Pair it with vitamin C, which the body needs to build collagen. Sea buckthorn is a rich natural source — try our Glow From Within combo.",
+            "Protect your skin from the sun, which breaks collagen down.",
+            "Stay hydrated and get enough protein overall."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "magnesium-sleep-recovery",
+      "title": "Magnesium: the calming mineral for sleep and recovery",
+      "excerpt": "Most of us don't get enough magnesium. Here's why it matters for relaxation, sleep and muscle recovery.",
+      "category": "Sleep",
+      "cover": "/products/magnesium-gummies.jpg",
+      "readMinutes": 4,
+      "relatedProducts": [
+        "magnesium-gummies",
+        "rest-restore-pack"
+      ],
+      "publishedAt": "2026-10-11",
+      "sections": [
+        {
+          "heading": "Why magnesium matters",
+          "body": [
+            "Magnesium is involved in more than 300 processes in the body, from energy production to muscle and nerve function. Modern diets that are high in processed food are often low in it.",
+            "Low magnesium is linked to muscle cramps, tension, poor sleep and fatigue."
+          ]
+        },
+        {
+          "heading": "Potential benefits",
+          "points": [
+            "Supports relaxation by helping regulate the nervous system",
+            "Supports better, more restful sleep",
+            "Supports muscle recovery after exercise and helps reduce cramps",
+            "Supports normal energy levels"
+          ]
+        },
+        {
+          "heading": "A calmer evening routine",
+          "points": [
+            "Take your magnesium gummies in the evening, about an hour before bed.",
+            "Dim the lights and put screens away 30 minutes before sleep.",
+            "A warm shower or a cup of herbal tea helps signal the body to wind down.",
+            "Keep a consistent bedtime — Ayurveda recommends sleeping before 10:30 pm."
+          ]
+        },
+        {
+          "heading": "Good to know",
+          "body": [
+            "People with kidney conditions should check with a doctor before taking magnesium supplements."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "vitamin-b12-energy-focus",
+      "title": "Vitamin B12: energy, focus and why vegetarians need it",
+      "excerpt": "Vitamin B12 deficiency is common in India. Learn the signs, the benefits and who should supplement.",
+      "category": "Nutrition",
+      "cover": "/products/vitamin-b12-capsules.jpg",
+      "readMinutes": 4,
+      "relatedProducts": [
+        "vitamin-b12-capsules",
+        "energy-focus-stack",
+        "complete-wellness-box"
+      ],
+      "publishedAt": "2026-10-14",
+      "sections": [
+        {
+          "heading": "What vitamin B12 does",
+          "body": [
+            "Vitamin B12 helps the body turn food into energy, make healthy red blood cells and keep the nervous system working properly.",
+            "It is found almost only in animal foods, so vegetarians and vegans are at higher risk of deficiency — and studies suggest B12 deficiency is widespread in India."
+          ]
+        },
+        {
+          "heading": "Signs you may be low",
+          "points": [
+            "Persistent tiredness or weakness",
+            "Poor concentration or memory",
+            "Tingling or numbness in hands and feet",
+            "Pale skin or breathlessness"
+          ]
+        },
+        {
+          "heading": "Potential benefits of supplementing",
+          "points": [
+            "Supports normal energy metabolism and reduces tiredness",
+            "Supports focus and cognitive function",
+            "Supports a healthy nervous system",
+            "Supports healthy red blood cell formation"
+          ]
+        },
+        {
+          "heading": "Good to know",
+          "body": [
+            "If you suspect a deficiency, a simple blood test can confirm it. Pregnant or nursing women and anyone on medication should consult a doctor before supplementing."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "multivitamin-daily-nutrition",
+      "title": "Do you need a multivitamin? Filling the gaps in modern diets",
+      "excerpt": "Even balanced diets can fall short. Here's how a daily multivitamin supports immunity, energy and overall wellbeing.",
+      "category": "Nutrition",
+      "cover": "/products/multivitamin-gummies.jpg",
+      "readMinutes": 4,
+      "relatedProducts": [
+        "multivitamin-gummies",
+        "rest-restore-pack",
+        "complete-wellness-box"
+      ],
+      "publishedAt": "2026-10-17",
+      "sections": [
+        {
+          "heading": "Why gaps happen",
+          "body": [
+            "Busy schedules, processed food, soil depletion and restrictive diets mean many people miss out on key vitamins and minerals — even when they eat reasonably well.",
+            "A multivitamin isn't a replacement for good food, but it can act as nutritional insurance."
+          ]
+        },
+        {
+          "heading": "Potential benefits",
+          "points": [
+            "Helps fill everyday nutritional gaps",
+            "Supports immunity with vitamins like C, D and zinc",
+            "Supports energy with B vitamins",
+            "Supports overall wellbeing for the whole family"
+          ]
+        },
+        {
+          "heading": "Why gummies?",
+          "body": [
+            "Gummies are easy to remember and enjoyable to take — which matters, because consistency is what makes supplements work. Take them with a meal for best absorption, and keep them out of reach of young children."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "apple-cider-vinegar-with-mother",
+      "title": "Apple cider vinegar with the Mother: digestion and metabolism",
+      "excerpt": "What the “Mother” is, what research says about ACV, and why dissolving tablets beat the harsh liquid.",
+      "category": "Digestion",
+      "cover": "/products/apple-cider-vinegar-tablets.jpg",
+      "readMinutes": 5,
+      "relatedProducts": [
+        "apple-cider-vinegar-tablets",
+        "acv-moringa-tablets",
+        "gut-metabolism-kit"
+      ],
+      "publishedAt": "2026-10-20",
+      "sections": [
+        {
+          "heading": "What is the “Mother”?",
+          "body": [
+            "Raw apple cider vinegar contains a cloudy web of proteins, enzymes and friendly bacteria called the Mother. It forms naturally during fermentation and is removed from filtered, clear vinegar.",
+            "Many people choose ACV with the Mother for its more complete, minimally processed profile."
+          ]
+        },
+        {
+          "heading": "Potential benefits",
+          "points": [
+            "Supports healthy digestion, especially when taken before meals",
+            "Studies suggest it may help moderate blood sugar spikes after meals",
+            "Supports metabolism and weight management as part of a healthy lifestyle",
+            "May help you feel fuller for longer"
+          ]
+        },
+        {
+          "heading": "Why a dissolving tablet?",
+          "body": [
+            "Liquid ACV is acidic and harsh on teeth and throat. A dissolving tablet gives you ACV in a pleasant, fizzy drink — no measuring, no sour aftertaste."
+          ]
+        },
+        {
+          "heading": "How to take it",
+          "points": [
+            "Drop one tablet in a glass of water and let it dissolve fully — never swallow it whole.",
+            "Drink it about 15–20 minutes before a meal.",
+            "If you have acidity or ulcers, check with a doctor first."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "moringa-the-miracle-tree",
+      "title": "Moringa: why the “miracle tree” is a nutrition powerhouse",
+      "excerpt": "Moringa leaves are packed with vitamins, minerals and antioxidants. Here's how they support detox, metabolism and immunity.",
+      "category": "Immunity",
+      "cover": "/products/acv-moringa-tablets.jpg",
+      "readMinutes": 4,
+      "relatedProducts": [
+        "acv-moringa-tablets",
+        "gut-metabolism-kit"
+      ],
+      "publishedAt": "2026-10-23",
+      "sections": [
+        {
+          "heading": "A tree with a long history",
+          "body": [
+            "Moringa oleifera, known in India as Shigru or drumstick tree, has been used in Ayurveda for centuries. Nearly every part of the tree is edible, but the leaves are the most nutrient-dense.",
+            "Gram for gram, moringa leaves are a notable source of vitamin C, vitamin A, calcium, iron and plant protein."
+          ]
+        },
+        {
+          "heading": "Potential benefits",
+          "points": [
+            "Rich in antioxidants that help protect cells from oxidative stress",
+            "Supports immunity with vitamins A and C",
+            "Supports natural detox and healthy metabolism",
+            "Studies suggest it may support healthy blood sugar levels"
+          ]
+        },
+        {
+          "heading": "Better together",
+          "body": [
+            "Our ACV Moringa dissolving tablet combines moringa with apple cider vinegar for a daily drink that supports detox, metabolism and immunity in one glass."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "rosemary-oil-hair-growth",
+      "title": "Rosemary oil for hair growth: what the research says",
+      "excerpt": "Rosemary oil has become a favourite for thicker, stronger hair. Here's how to use it properly for the best results.",
+      "category": "Skin & Hair",
+      "cover": "/products/rosemary-oil.jpg",
+      "readMinutes": 4,
+      "relatedProducts": [
+        "rosemary-oil",
+        "hair-care-ritual"
+      ],
+      "publishedAt": "2026-10-26",
+      "sections": [
+        {
+          "heading": "Why rosemary?",
+          "body": [
+            "Rosemary (Rosmarinus officinalis) has long been used for scalp care. Early research suggests rosemary oil may support hair growth, with one study finding results comparable to a common hair-growth treatment after six months.",
+            "It is thought to work by improving circulation to the scalp and calming irritation."
+          ]
+        },
+        {
+          "heading": "Potential benefits",
+          "points": [
+            "Supports healthy hair growth and thickness",
+            "Nourishes a dry, flaky scalp",
+            "Helps hair look stronger and fuller",
+            "A calming, aromatic scalp massage ritual"
+          ]
+        },
+        {
+          "heading": "How to use it",
+          "points": [
+            "Apply a few drops to the scalp and massage gently for 3–5 minutes.",
+            "Leave it on for at least an hour, or overnight, then wash with a mild shampoo.",
+            "Use 2–3 times a week and give it at least 3 months.",
+            "Always patch test first and keep it away from your eyes."
+          ]
+        },
+        {
+          "heading": "Inside and out",
+          "body": [
+            "Healthy hair also depends on nutrition. Pair rosemary oil with collagen in our Hair Care Ritual combo for support from the inside."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sea-buckthorn-omega-7",
+      "title": "Sea buckthorn: the rare source of Omega 3, 6, 7 and 9",
+      "excerpt": "This bright orange Himalayan berry is rich in vitamin C and rare Omega 7. Here's what it can do for immunity and skin.",
+      "category": "Immunity",
+      "cover": "/products/sea-buckthorn-juice.jpg",
+      "readMinutes": 4,
+      "relatedProducts": [
+        "sea-buckthorn-juice",
+        "glow-from-within"
+      ],
+      "publishedAt": "2026-10-29",
+      "sections": [
+        {
+          "heading": "The berry of the mountains",
+          "body": [
+            "Sea buckthorn (Hippophae rhamnoides) is a hardy shrub that thrives in cold, high-altitude regions — including Ladakh and the Himalayas. Its small orange berries have been used in traditional medicine for centuries.",
+            "It is one of the very few plant sources of Omega 7, alongside Omega 3, 6 and 9."
+          ]
+        },
+        {
+          "heading": "Potential benefits",
+          "points": [
+            "Rich in vitamin C to support immunity",
+            "Omega 7 supports healthy, hydrated skin and mucous membranes",
+            "Antioxidants help protect cells from oxidative stress",
+            "Traditionally used to support overall balance, including hormonal balance"
+          ]
+        },
+        {
+          "heading": "For glowing skin",
+          "body": [
+            "Because vitamin C is essential for collagen production, sea buckthorn pairs naturally with collagen — try our Glow From Within combo for skin support from the inside."
+          ]
+        }
+      ]
+    }
+  ]
+}

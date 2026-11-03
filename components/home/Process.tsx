@@ -23,7 +23,7 @@ const STEPS = [
 
 export default function Process() {
   return (
-    <Reveal as="section" id="process" className="scroll-mt-14 py-24 md:py-36">
+    <Reveal as="section" id="process" className="scroll-mt-24 py-24 md:py-36">
       <div className="container-x">
         <SectionHead center eyebrow="Our promise" title="Nature. Science. Wellness." subtitle="The same care goes into every product in the Mirasha range." />
         <ol className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">

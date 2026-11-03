@@ -12,4 +12,5 @@ export const CATEGORY_NAMES: Record<string, string> = {
   "digestion-metabolism": "Digestion & Metabolism",
   "sleep-relaxation": "Sleep & Relaxation",
   immunity: "Immunity",
+  combos: "Combos",
 };

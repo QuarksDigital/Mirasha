@@ -43,7 +43,7 @@ const DOSHAS = [
 
 export default function Doshas() {
   return (
-    <Reveal as="section" id="doshas" className="scroll-mt-14 py-24 md:py-36">
+    <Reveal as="section" id="doshas" className="scroll-mt-24 py-24 md:py-36">
       <div className="container-x">
         <SectionHead
           center

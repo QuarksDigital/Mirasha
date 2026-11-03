@@ -8,7 +8,7 @@ export default function Spotlight({ product }: { product?: Product }) {
   if (!product) return null;
   const v = product.variants[0];
   return (
-    <Reveal as="section" className="pb-24 md:pb-36">
+    <Reveal as="section" className="py-24 md:py-36">
       <div className="container-x">
         <div className="grid items-center gap-10 overflow-hidden rounded-[36px] bg-bone p-6 md:p-10 lg:grid-cols-2 lg:gap-16 lg:p-14">
           <div className="lg:pl-4">
@@ -30,7 +30,7 @@ export default function Spotlight({ product }: { product?: Product }) {
               </Link>
             </div>
           </div>
-          <div data-reveal className="relative aspect-square overflow-hidden rounded-[28px] bg-white">
+          <div data-reveal className="relative aspect-[5/6] overflow-hidden rounded-[28px] bg-white">
             <Image src={product.images[0]} alt={product.name} fill sizes="(min-width: 1024px) 560px, 100vw" className="object-contain p-8 md:p-12" />
           </div>
         </div>

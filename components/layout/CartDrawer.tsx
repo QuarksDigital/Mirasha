@@ -32,13 +32,13 @@ export default function CartDrawer() {
       />
       <aside
         role="dialog"
-        aria-label="Bag"
+        aria-label="Cart"
         className={`absolute right-0 top-0 flex h-full w-full max-w-[420px] flex-col bg-paper shadow-2xl transition-transform duration-500 ease-[cubic-bezier(.2,.8,.2,1)] ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex items-center justify-between px-6 pb-4 pt-6">
-          <p className="text-2xl font-semibold tracking-tight">Your bag</p>
+          <p className="text-2xl font-semibold tracking-tight">Your cart</p>
           <button type="button" onClick={close} aria-label="Close" className="flex h-9 w-9 items-center justify-center rounded-full bg-bone text-muted hover:text-ink">
             ✕
           </button>
@@ -58,7 +58,7 @@ export default function CartDrawer() {
         <div className="flex-1 overflow-y-auto px-6" data-lenis-prevent>
           {items.length === 0 ? (
             <div className="flex h-full flex-col items-center justify-center gap-5 text-center">
-              <p className="text-xl font-semibold">Your bag is empty.</p>
+              <p className="text-xl font-semibold">Your cart is empty.</p>
               <Link href="/shop" onClick={close} className="btn btn-brand">
                 Continue shopping
               </Link>
@@ -101,7 +101,7 @@ export default function CartDrawer() {
               Check out
             </Link>
             <Link href="/cart" onClick={close} className="mt-3 block text-center text-sm text-brand hover:underline">
-              View bag
+              View cart
             </Link>
           </div>
         )}

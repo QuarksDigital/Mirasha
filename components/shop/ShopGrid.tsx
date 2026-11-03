@@ -1,96 +1,56 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import ProductCard from "@/components/product/ProductCard";
-import type { Category, Product } from "@/lib/types";
+import type { Product } from "@/lib/types";
 
-const SORTS = [
-  { value: "featured", label: "Featured" },
-  { value: "popular", label: "Most popular" },
-  { value: "rating", label: "Top rated" },
-  { value: "price-asc", label: "Price: low to high" },
-  { value: "price-desc", label: "Price: high to low" },
-];
+// Featured first, then most-reviewed.
+const byFeatured = (a: Product, b: Product) => Number(b.isFeatured) - Number(a.isFeatured) || b.reviewCount - a.reviewCount;
 
-const sorters: Record<string, (a: Product, b: Product) => number> = {
-  featured: (a, b) => Number(b.isFeatured) - Number(a.isFeatured) || b.reviewCount - a.reviewCount,
-  popular: (a, b) => b.reviewCount - a.reviewCount,
-  rating: (a, b) => b.rating - a.rating,
-  "price-asc": (a, b) => a.variants[0].price - b.variants[0].price,
-  "price-desc": (a, b) => b.variants[0].price - a.variants[0].price,
-};
-
-export default function ShopGrid({ products, categories }: { products: Product[]; categories: Category[] }) {
-  const params = useSearchParams();
-  const router = useRouter();
-  const pathname = usePathname();
-  const category = params.get("category") ?? "";
-  const [sort, setSort] = useState("featured");
+export default function ShopGrid({ products }: { products: Product[] }) {
   const [q, setQ] = useState("");
-
-  const setCategory = (slug: string) => {
-    const next = new URLSearchParams(params);
-    if (slug) next.set("category", slug);
-    else next.delete("category");
-    router.replace(`${pathname}${next.size ? `?${next}` : ""}`, { scroll: false });
-  };
 
   const visible = useMemo(() => {
     const needle = q.trim().toLowerCase();
     return products
-      .filter((p) => !category || p.category === category)
       .filter(
         (p) =>
           !needle ||
-          [p.name, p.tagline, p.sanskritName ?? "", ...p.tags, ...p.keyIngredients.map((i) => i.name)].some((s) =>
+          [p.name, p.tagline, p.form, p.sanskritName ?? "", ...p.tags, ...p.keyIngredients.map((i) => i.name)].some((s) =>
             s.toLowerCase().includes(needle)
           )
       )
-      .sort(sorters[sort]);
-  }, [products, category, sort, q]);
+      .sort(byFeatured);
+  }, [products, q]);
 
   return (
     <div className="container-x pb-32">
-      <div className="sticky top-14 z-20 -mx-5 border-b border-line/60 bg-white/85 px-5 py-4 backdrop-blur-xl touch-solid md:-mx-8 md:px-8">
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <nav className="-mx-1 flex gap-2 overflow-x-auto px-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" aria-label="Categories">
-            {[{ slug: "", name: "All" }, ...categories].map((c) => (
-              <button
-                key={c.slug || "all"}
-                type="button"
-                onClick={() => setCategory(c.slug)}
-                className={`shrink-0 rounded-full px-4 py-2 text-sm transition-colors ${
-                  category === c.slug ? "bg-ink text-white" : "bg-bone text-ink hover:bg-[#e8e8ed]"
-                }`}
-              >
-                {c.name}
-              </button>
-            ))}
-          </nav>
-          <div className="flex gap-3">
+      <div className="sticky top-24 z-20 -mx-5 border-b border-line/60 bg-white/85 px-5 py-4 backdrop-blur-xl touch-solid md:-mx-8 md:px-8">
+        <div className="flex items-center justify-between gap-4">
+          <p className="hidden text-sm text-muted sm:block">
+            {visible.length} of {products.length} products
+          </p>
+          <div className="relative w-full sm:w-80">
+            <svg viewBox="0 0 24 24" className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-3.5-3.5" />
+            </svg>
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder="Search"
+              placeholder="Search products, combos, ingredients"
               aria-label="Search products"
-              className="field !h-10 !rounded-full lg:w-56"
+              type="search"
+              className="field !h-11 !rounded-full !pl-10"
             />
-            <select value={sort} onChange={(e) => setSort(e.target.value)} aria-label="Sort" className="field !h-10 !w-auto !rounded-full pr-8 text-sm">
-              {SORTS.map((s) => (
-                <option key={s.value} value={s.value}>
-                  {s.label}
-                </option>
-              ))}
-            </select>
           </div>
         </div>
       </div>
 
       {visible.length === 0 ? (
-        <p className="py-24 text-center text-xl text-muted">No products match your search.</p>
+        <p className="py-24 text-center text-xl text-muted">No products match “{q}”.</p>
       ) : (
-        <div className="grid gap-x-6 gap-y-14 pt-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="product-grid pt-10 md:pt-12 xl:grid-cols-4">
           {visible.map((p) => (
             <ProductCard key={p.slug} product={p} />
           ))}

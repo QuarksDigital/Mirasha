@@ -32,7 +32,7 @@ export default function ProductPage({ params }: PageProps<"/products/[slug]">) {
 function ProductSkeleton() {
   return (
     <div className="container-x grid gap-12 pt-28 lg:grid-cols-2" aria-busy>
-      <div className="aspect-square animate-pulse rounded-[36px] bg-bone" />
+      <div className="aspect-[5/6] animate-pulse rounded-[36px] bg-bone" />
       <div className="space-y-4 pt-6">
         <div className="h-4 w-32 animate-pulse rounded bg-bone" />
         <div className="h-12 w-3/4 animate-pulse rounded bg-bone" />
@@ -60,7 +60,7 @@ async function ProductDetails({ params }: { params: PageProps<"/products/[slug]"
   ].filter(([, v]) => v);
 
   return (
-    <div className="pt-14">
+    <div className="pt-24">
       <div className="container-x">
         <nav className="flex flex-wrap gap-1.5 pt-6 text-sm text-muted" aria-label="Breadcrumb">
           <Link href="/shop" className="hover:text-ink">Shop</Link>
@@ -70,7 +70,7 @@ async function ProductDetails({ params }: { params: PageProps<"/products/[slug]"
 
         <section className="grid gap-10 pt-8 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
           <div className="lg:sticky lg:top-24 lg:self-start">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[36px] bg-bone">
+            <div className="relative aspect-[5/6] overflow-hidden rounded-[36px] bg-bone">
               <Image src={p.images[0]} alt={p.name} fill preload sizes="(min-width: 1024px) 55vw, 100vw" className="object-cover" />
             </div>
           </div>
@@ -101,6 +101,23 @@ async function ProductDetails({ params }: { params: PageProps<"/products/[slug]"
               <Block title="Overview">
                 <p className="text-lg leading-relaxed text-muted">{p.description}</p>
               </Block>
+
+              {p.components && p.components.length > 0 && (
+                <Block title="What's in the combo">
+                  <ul className="divide-y divide-line/70 border-y border-line/70">
+                    {p.components.map((c) => (
+                      <li key={c.slug} className="flex items-center justify-between gap-4 py-4">
+                        <Link href={`/products/${c.slug}`} className="font-medium hover:underline">
+                          {c.name}
+                        </Link>
+                        <span className="text-sm text-muted">
+                          {c.quantity} × {c.label}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </Block>
+              )}
 
               <Block title="Benefits">
                 <ul className="space-y-3">
@@ -179,7 +196,7 @@ async function ProductDetails({ params }: { params: PageProps<"/products/[slug]"
         <section className="mt-16 bg-bone py-24">
           <div className="container-x">
             <h2 className="headline mb-12 text-3xl md:text-5xl">You may also like.</h2>
-            <div className="grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="product-grid lg:grid-cols-4">
               {related.map((r) => (
                 <ProductCard key={r.slug} product={r} />
               ))}

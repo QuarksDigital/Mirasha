@@ -46,6 +46,9 @@ export interface Product {
   isFeatured: boolean;
   isBestseller: boolean;
   faq: { q: string; a: string }[];
+  isCombo?: boolean;
+  /** items included in a combo */
+  components?: { slug: string; name: string; sku: string; label: string; quantity: number }[];
 }
 
 export interface Category {
@@ -69,7 +72,67 @@ export interface CartItem {
 export interface Quote {
   items: { slug: string; sku: string; name: string; label: string; unitPrice: number; quantity: number; lineTotal: number }[];
   subtotal: number;
+  discount: number;
+  coupon: { code: string; description?: string } | null;
   shipping: number;
   total: number;
   currency: string;
+}
+
+export interface Offer {
+  _id?: string;
+  title: string;
+  detail?: string;
+  code?: string;
+  link?: string;
+  active?: boolean;
+  order?: number;
+}
+
+export interface PostSection {
+  heading: string;
+  body?: string[];
+  points?: string[];
+}
+
+export interface Post {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  cover: string;
+  readMinutes: number;
+  relatedProducts?: string[];
+  publishedAt: string;
+  sections?: PostSection[];
+}
+
+export interface Testimonial {
+  _id?: string;
+  name: string;
+  city?: string;
+  product?: string;
+  rating?: number;
+  quote: string;
+}
+
+export interface Video {
+  _id?: string;
+  kind: "instagram" | "youtube" | "mp4";
+  url: string;
+  title?: string;
+  poster?: string;
+}
+
+export interface SiteSettings {
+  siteName?: string;
+  domain?: string;
+  whatsappNumber?: string;
+  whatsappMessage?: string;
+  instagramUrl?: string;
+  shopifyUrl?: string;
+  supportEmail?: string;
+  supportPhone?: string;
+  freeShippingAbove?: number;
+  shippingFee?: number;
 }

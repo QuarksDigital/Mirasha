@@ -19,12 +19,20 @@ const PillScene = dynamic(() => import("./PillScene"), { ssr: false });
 // Keep in sync with the phases documented in PillScene.
 const T = {
   copyOut: [0, 0.1],
-  white: [0.4, 0.5],
-  black: [0.52, 0.6],
-  slide: [0.63, 0.93],
+  white: [0.39, 0.44], // fades to the tablets' own colour (not white) once they cover the lens
+  black: [0.48, 0.53],
+  slide: [0.56, 0.9],
 } as const;
 
-const FULL_PLAY_S = 3.6; // auto-play duration for the whole sequence
+const AYURVEDA_BENEFITS = [
+  { title: "Whole-body balance", body: "Treats the root cause and the whole person, not just symptoms." },
+  { title: "Natural ingredients", body: "Time-tested herbs, minerals and botanicals from nature." },
+  { title: "Prevention first", body: "Daily rituals that build immunity, energy and resilience." },
+  { title: "5,000 years of wisdom", body: "Classical knowledge, now supported by modern science." },
+];
+
+const FULL_PLAY_S = 4.2; // auto-play duration for the whole sequence, forwards
+const REWIND_S = 2.2; // …and backwards, when scrolling up into the hero
 const easeInOutSine = (t: number) => -(Math.cos(Math.PI * t) - 1) / 2;
 
 export default function Hero() {
@@ -51,7 +59,7 @@ export default function Hero() {
     if (remaining < 0.002) return;
     autoDir.current = dir;
     l.scrollTo(target, {
-      duration: Math.max(0.5, FULL_PLAY_S * remaining),
+      duration: Math.max(0.5, (dir > 0 ? FULL_PLAY_S : REWIND_S) * remaining),
       easing: easeInOutSine,
       force: true,
       onComplete: () => (autoDir.current = 0),
@@ -60,7 +68,7 @@ export default function Hero() {
 
   useLayoutEffect(() => {
     document.documentElement.dataset.hero = "on";
-    track("hero-scene"); // the loading screen waits for the capsule's first frame
+    track("hero-scene"); // the loading screen waits for the bottle's first frame
     return () => {
       delete document.documentElement.dataset.hero;
     };
@@ -74,20 +82,22 @@ export default function Hero() {
         scrollTrigger: {
           trigger: root.current,
           start: "top top",
-          end: "+=280%",
+          end: "+=260%",
           scrub: 0.8,
           pin: true,
           anticipatePin: 1,
           // Touch scrolling is native (not routed through Lenis), so the wheel guard below
           // can't see it: snap to the end/start in the swipe direction instead.
           snap: window.matchMedia("(pointer: coarse)").matches
-            ? { snapTo: [0, 1], directional: true, duration: { min: 0.8, max: 2.4 }, delay: 0.05, ease: "sine.inOut" }
+            ? { snapTo: [0, 1], directional: true, duration: { min: 1, max: 4 }, delay: 0.05, ease: "sine.inOut" }
             : undefined,
           // Scrolling back up out of the page into the hero rewinds it fully.
           onEnterBack: () => autoPlay(-1),
+          onLeave: () => (document.documentElement.dataset.hero = "past"),
           onUpdate: (self) => {
             progress.current = self.progress;
-            document.documentElement.dataset.hero = self.progress < T.slide[0] + 0.05 ? "on" : "off";
+            // "past" (hero fully scrolled away) lets the header's offers marquee slide in
+            document.documentElement.dataset.hero = self.progress < T.slide[0] + 0.05 ? "on" : self.progress > 0.995 ? "past" : "off";
             setActive(self.progress < T.black[1]);
           },
         },
@@ -143,38 +153,49 @@ export default function Hero() {
   return (
     <section ref={root} className="relative h-svh w-full overflow-hidden bg-paper" aria-label="Introduction">
       {/* Layer 0 - what the black curtain reveals */}
-      <div className="absolute inset-0 flex items-center justify-center bg-paper">
+      <div className="absolute inset-0 flex items-center justify-center bg-paper pt-14">
         <div className="container-x text-center">
           <p data-reveal-item className="eyebrow">
             Ayurvedic · Natural · Wellness
           </p>
-          <h2 data-reveal-item className="headline mx-auto mt-4 max-w-4xl text-[clamp(2.6rem,7vw,5.5rem)]">
+          <h2 data-reveal-item className="headline mx-auto mt-3 max-w-4xl text-[clamp(2.2rem,5.6vw,4.75rem)]">
             A complete wellness universe.
             <br />
             <span className="text-muted">Now under one brand.</span>
           </h2>
-          <p data-reveal-item className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
-            Premium Ayurvedic and modern wellness formulations, made with high-quality ingredients and backed by
-            science.
+          <p data-reveal-item className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted md:text-lg">
+            Premium Ayurvedic and modern wellness formulations, made with high-quality ingredients and backed by science.
           </p>
-          <div data-reveal-item className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <div data-reveal-item className="mt-7 flex flex-wrap items-center justify-center gap-4">
             <Link href="/shop" className="btn btn-brand">
               Shop all products
             </Link>
-            <a href="#concerns" className="link text-[17px]">
-              Shop by concern ›
-            </a>
+            <Link href="/blog/ayurveda-basics-doshas" className="link text-[17px]">
+              Why Ayurveda ›
+            </Link>
           </div>
+          {/* The benefits of Ayurveda */}
+          <ul className="mx-auto mt-10 grid max-w-4xl grid-cols-2 gap-x-6 gap-y-5 border-t border-line/70 pt-7 text-left md:mt-12 md:grid-cols-4">
+            {AYURVEDA_BENEFITS.map((b) => (
+              <li key={b.title} data-reveal-item>
+                <p className="text-sm font-semibold md:text-[15px]">
+                  <span className="mr-1.5 text-gold">✦</span>
+                  {b.title}
+                </p>
+                <p className="mt-1 text-xs leading-relaxed text-muted md:text-sm">{b.body}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
-      {/* Layer 1 - the capsule */}
+      {/* Layer 1 - the Ashwagandha bottle */}
       <div data-hero-canvas className="absolute inset-0 bg-black">
         <PillScene progress={progress} onPillClick={play} active={active} onReady={markSceneReady} />
       </div>
 
       {/* Layer 2 - hero copy */}
-      {/* Landscape (`side` variant): text left, capsule right (offset in PillScene). Portrait: text on top, capsule below. */}
+      {/* Landscape (`side` variant): text left, bottle right (offset in PillScene). Portrait: text on top, bottle below. */}
       <div data-hero-copy className="pointer-events-none absolute inset-0 text-[#f5f5f7]">
         <div className="container-x flex h-full flex-col items-center pt-24 text-center side:items-start side:justify-center side:pt-0 side:text-left">
           <h1 className="text-[#c9a45c]">
@@ -189,7 +210,7 @@ export default function Hero() {
         <button
           type="button"
           onClick={play}
-          aria-label="Open the capsule"
+          aria-label="Pour the tablets"
           className="pointer-events-auto absolute bottom-6 left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full text-white/50 transition-colors hover:text-white"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 animate-bounce" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
@@ -198,8 +219,9 @@ export default function Hero() {
         </button>
       </div>
 
-      {/* Layer 3 - white-out as the pellets fill the lens */}
-      <div data-hero-white className="pointer-events-none invisible absolute inset-0 bg-paper opacity-0" />
+      {/* Layer 3 - fade to tablet colour as the tablets fill the lens */}
+      {/* plain tablet colour, matched to the lit tablets that cover the lens just before */}
+      <div data-hero-white className="pointer-events-none invisible absolute inset-0 bg-[#b4966f] opacity-0" />
 
       {/* Layer 4 - black curtain that slides down */}
       <div data-hero-black className="pointer-events-none invisible absolute inset-0 bg-black opacity-0" />

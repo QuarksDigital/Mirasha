@@ -76,6 +76,21 @@ html.lenis body {
     }
   }
 
+  /* Product listings: 2 columns on phones, 3 from tablets; add lg:grid-cols-4 for 4 on desktop */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0.875rem;
+    row-gap: 2.25rem;
+  }
+  @media (min-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: 1.5rem;
+      row-gap: 3.5rem;
+    }
+  }
+
   .headline {
     font-family: var(--font-display), var(--font-inter), sans-serif;
     font-weight: 600;
@@ -192,13 +207,25 @@ html[data-hero="on"] .site-header {
 
 
 
-/* Custom cursor (fine pointers only - see components/layout/Cursor.tsx) */
-html.has-custom-cursor,
-html.has-custom-cursor * {
-  cursor: none !important;
-}
-html.has-custom-cursor :is(input, textarea, [contenteditable="true"]) {
-  cursor: text !important;
+/*
+ * Custom cursor: gold-to-silver arrow and hand (public/cursors). Plain CSS cursors move with
+ * zero lag and cost nothing per frame; touch devices never show them.
+ */
+@media (hover: hover) and (pointer: fine) {
+  :root {
+    --cursor-arrow: image-set(url(/cursors/arrow-32.png) 1x, url(/cursors/arrow-64.png) 2x) 4 3, auto;
+    --cursor-hand: image-set(url(/cursors/hand-32.png) 1x, url(/cursors/hand-64.png) 2x) 10 3, pointer;
+  }
+  html,
+  body {
+    cursor: var(--cursor-arrow);
+  }
+  :is(a, button, summary, label, select, [role="button"], [data-cursor="hand"]):not(:disabled) {
+    cursor: var(--cursor-hand);
+  }
+  :is(input, textarea, [contenteditable="true"]) {
+    cursor: text;
+  }
 }
 
 /* Frosted bars are costly to repaint while scrolling on phones: use a solid fill there */
@@ -219,3 +246,53 @@ html.is-loading body {
   overflow: hidden;
 }
 
+
+/* Offer marquee: two identical halves scroll by exactly half their width, so the loop is seamless */
+@keyframes marquee-x {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.marquee-track {
+  animation: marquee-x var(--marquee-duration, 40s) linear infinite;
+}
+.marquee-reverse .marquee-track {
+  animation-direction: reverse;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* Header offers band: collapsed while the hero is on screen (Hero sets data-hero on/off/past) */
+.header-marquee {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.header-marquee > div {
+  transition:
+    opacity 0.45s ease,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+html[data-hero]:not([data-hero="past"]) .header-marquee {
+  grid-template-rows: 0fr;
+}
+html[data-hero]:not([data-hero="past"]) .header-marquee > div {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+/* The admin panel takes over the whole screen: hide the storefront chrome */
+html[data-admin] .site-header,
+html[data-admin] footer,
+html[data-admin] .floating-actions {
+  display: none !important;
+}

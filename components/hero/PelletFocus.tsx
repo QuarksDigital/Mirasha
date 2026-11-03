@@ -9,8 +9,8 @@ import * as THREE from "three";
 // Loaded lazily by PillScene (desktop only) so the post-processing library stays out of the main bundle.
 // Keep these in sync with the timeline in PillScene.
 const CAMERA_Z = 11;
-const BLUR_START = 0.12; // capsule starts to defocus as the first pellets get close
-const BLUR_FULL = 0.26;
+const BLUR_START = 0.32; // bottle starts to defocus as the first tablets get close
+const BLUR_FULL = 0.4;
 const WARM_FRAMES = 2; // render enabled briefly on mount so every shader variant compiles up front
 
 const smoothstep = (a: number, b: number, x: number) => {

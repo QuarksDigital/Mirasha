@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
+// Where the Express API runs. The browser always calls same-origin /api/* (so the session
+// cookie is first-party on www.mirasha.in); Next forwards those requests here.
+const BACKEND_URL = process.env.BACKEND_URL ?? process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
+
 const nextConfig: NextConfig = {
-  /* config options here */
   experimental: {
     agentFeedback: true,
   },
@@ -14,6 +17,9 @@ const nextConfig: NextConfig = {
         as: "*.css",
       },
     },
+  },
+  rewrites() {
+    return [{ source: "/api/:path*", destination: `${BACKEND_URL}/api/:path*` }];
   },
 };
 

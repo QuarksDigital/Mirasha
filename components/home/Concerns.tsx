@@ -7,7 +7,7 @@ const TINTS = ["bg-gold-soft", "bg-brand-soft", "bg-bone"];
 
 export default function Concerns({ categories }: { categories: Category[] }) {
   return (
-    <Reveal as="section" id="concerns" className="scroll-mt-14 bg-bone py-24 md:py-36">
+    <Reveal as="section" id="concerns" className="scroll-mt-24 bg-bone py-24 md:py-36">
       <div className="container-x">
         <SectionHead eyebrow="Shop by concern" title="What does your body need?" subtitle="Formulations grouped by what they support, so you can find the right one quickly." />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

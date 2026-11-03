@@ -20,7 +20,7 @@ export default function Bestsellers({ products }: { products: Product[] }) {
         {products.length === 0 ? (
           <p className="text-muted">Products unavailable - start the API (backend) and refresh.</p>
         ) : (
-          <div className="grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="product-grid lg:grid-cols-4">
             {products.map((p) => (
               <div key={p.slug} data-reveal>
                 <ProductCard product={p} />
